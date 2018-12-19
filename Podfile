@@ -5,17 +5,18 @@
 # is part of the source tree.
 
 source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
 
 abstract_target 'Base' do
 
-  target 'Snowplow' do
+  target 'Snowplow iOS' do
     inherit! :search_paths
     platform :ios, '8.0'
     pod 'FMDB', '2.6.2'
     pod 'ReachabilitySwift'
   end
 
-  target 'Snowplow-OSX' do
+  target 'Snowplow macOS' do
     pod 'FMDB', '2.6.2'
     platform :osx, '10.9'
   end
@@ -23,14 +24,14 @@ end
 
 abstract_target 'BaseTests' do
 
-  target 'SnowplowTests' do
+  target 'Snowplow iOSTests' do
     inherit! :search_paths
     platform :ios, '8.0'
     pod 'Nocilla'
     pod 'SnowplowIgluClient'
   end
 
-  target 'Snowplow-OSXTests' do
+  target 'Snowplow macOSTests' do
     platform :osx, '10.9'
     pod 'Nocilla'
     pod 'SnowplowIgluClient'
@@ -51,7 +52,7 @@ end
 def handle_sqlite3 installer
   # We need to remove sqlite3 from the library
   # For details see: https://github.com/CocoaPods/CocoaPods/issues/830
-  default_library = installer.aggregate_targets.detect { |i| i.target_definition.name == 'Snowplow' }
+  default_library = installer.aggregate_targets.detect { |i| i.target_definition.name == 'Snowplow iOS' }
   [default_library.xcconfig_relative_path('Debug'), default_library.xcconfig_relative_path('Release')].each do |path|
     path = File.expand_path(File.join(File.dirname(__FILE__), path))
     File.open("config.tmp", "w") do |io|
@@ -63,7 +64,7 @@ def handle_sqlite3 installer
   end
 
   # We need to add sqlite3 into the test suite
-  default_library = installer.aggregate_targets.detect { |i| i.target_definition.name == 'SnowplowTests' }
+  default_library = installer.aggregate_targets.detect { |i| i.target_definition.name == 'Snowplow iOSTests' }
   [default_library.xcconfig_relative_path('Debug'), default_library.xcconfig_relative_path('Release')].each do |path|
     path = File.expand_path(File.join(File.dirname(__FILE__), path))
     File.open("config.tmp", "w") do |io|
