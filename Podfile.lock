@@ -14,7 +14,7 @@ DEPENDENCIES:
   - FMDB (= 2.6.2)
   - Nocilla
   - ReachabilitySwift
-  - SnowplowIgluClient
+  - SnowplowIgluClient (from `https://github.com/snowplow/iglu-objc-client.git`, branch `feature/carthage`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -22,7 +22,16 @@ SPEC REPOS:
     - KiteJSONValidator
     - Nocilla
     - ReachabilitySwift
-    - SnowplowIgluClient
+
+EXTERNAL SOURCES:
+  SnowplowIgluClient:
+    :branch: feature/carthage
+    :git: https://github.com/snowplow/iglu-objc-client.git
+
+CHECKOUT OPTIONS:
+  SnowplowIgluClient:
+    :commit: 7e10cdc45dd755070b8789c5f772f5930772320f
+    :git: https://github.com/snowplow/iglu-objc-client.git
 
 SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
@@ -31,6 +40,6 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   SnowplowIgluClient: 7c4a00d7a866f4f36608356c3fb9d9771cf9f9f2
 
-PODFILE CHECKSUM: 424de7e5368726c328acebc6fa564f52e2836168
+PODFILE CHECKSUM: 4575548f06c77aacb99a70c7ed127a8c93ff4bae
 
 COCOAPODS: 1.5.3
