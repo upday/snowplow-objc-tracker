@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [[ $PACKAGE_MANAGER == 'carthage' ]]; then
-    carthage update
+    carthage update --platform iOS
 elif [[ $PACKAGE_MANAGER == 'cocoapods' ]]; then
     pod repo update
     pod install
