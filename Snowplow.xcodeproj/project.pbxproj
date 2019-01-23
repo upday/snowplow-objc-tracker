@@ -10,9 +10,9 @@
 		752DABD521CC38560065F874 /* SnowplowTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DABCC21CC38550065F874 /* SnowplowTracker.framework */; };
 		752DABFE21CC3B380065F874 /* Snowplow_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DABF521CC3B380065F874 /* Snowplow_macOS.framework */; };
 		752DAC0321CC3B380065F874 /* Snowplow_macOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 752DAC0221CC3B380065F874 /* Snowplow_macOSTests.m */; };
-		752DAC0D21CC3EEA0065F874 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DAC0C21CC3EEA0065F874 /* FMDB.framework */; };
-		752DAC0F21CC3EED0065F874 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DAC0E21CC3EED0065F874 /* Reachability.framework */; };
-		752DAC1121CC3F020065F874 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DAC1021CC3F010065F874 /* FMDB.framework */; };
+		752DAC0D21CC3EEA0065F874 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DAC0C21CC3EEA0065F874 /* FMDB.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		752DAC0F21CC3EED0065F874 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DAC0E21CC3EED0065F874 /* Reachability.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		752DAC1121CC3F020065F874 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DAC1021CC3F010065F874 /* FMDB.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		752DAC1721CC42BC0065F874 /* Snowplow.m in Sources */ = {isa = PBXBuildFile; fileRef = 043EC5E61B8F224900294081 /* Snowplow.m */; };
 		752DAC1921CC42BC0065F874 /* SPTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9E8211192DD336006744C9 /* SPTracker.m */; };
 		752DAC1B21CC42BC0065F874 /* SPEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0C27EA191B43D600018557 /* SPEmitter.m */; };
@@ -113,7 +113,7 @@
 		75CAC45221F2A19500271FB3 /* SPWeakTimerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 044CA88C1B94792B000EA3B1 /* SPWeakTimerTarget.m */; };
 		75CAC45321F2A19500271FB3 /* SPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0402EBED1BA93CCC006C8818 /* SPEvent.m */; };
 		75CAC45621F2A1CC00271FB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0C27C0191B408200018557 /* Foundation.framework */; };
-		75CAC45721F2A1E400271FB3 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DAC1321CC3F140065F874 /* FMDB.framework */; };
+		75CAC45721F2A1E400271FB3 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DAC1321CC3F140065F874 /* FMDB.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		75CAC45821F2A21B00271FB3 /* Snowplow-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D6061E21C9CA8A00C7B016 /* Snowplow-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75CAC45921F2A21B00271FB3 /* Snowplow.h in Headers */ = {isa = PBXBuildFile; fileRef = AB0C27C5191B408200018557 /* Snowplow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75CAC45A21F2A21B00271FB3 /* SPTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9E8210192DD336006744C9 /* SPTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
