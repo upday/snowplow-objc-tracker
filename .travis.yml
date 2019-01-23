@@ -1,9 +1,9 @@
 language: objective-c
 osx_image: xcode10.1
 env:
-    - PACKAGE_MANAGER="cocoapods" TEST_PLATFORM="platform=iOS Simulator,OS=12.1,name=iPhone XR"
-    - PACKAGE_MANAGER="cocoapods" TEST_PLATFORM="platform=iOS Simulator,OS=12.1,name=iPhone 7"
-    - PACKAGE_MANAGER="cocoapods" TEST_PLATFORM="platform=iOS Simulator,OS=12.1,name=iPhone 8"
+    - TEST_PLATFORM="platform=iOS Simulator,OS=10.0,name=iPhone XR"
+    - TEST_PLATFORM="platform=iOS Simulator,OS=11.0,name=iPhone XR"
+    - TEST_PLATFORM="platform=iOS Simulator,OS=12.0,name=iPhone XR"
 rvm:
     - 2.3.7
 before_install:
@@ -16,7 +16,3 @@ install:
     - ./.travis/install.sh
 script: ./.travis/test.sh
 after_success: slather
-matrix:
-    include:
-        - env:
-            - PACKAGE_MANAGER="carthage" TEST_PLATFORM="platform=iOS Simulator,OS=12.1,name=iPhone 8"

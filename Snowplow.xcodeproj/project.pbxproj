@@ -229,6 +229,9 @@
 		75CAC40421F2955100271FB3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75D6061E21C9CA8A00C7B016 /* Snowplow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Snowplow-Bridging-Header.h"; sourceTree = "<group>"; };
 		75D6061F21C9CA8B00C7B016 /* ReachabilityBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityBridge.swift; sourceTree = "<group>"; };
+		75F9C55721F8212500A5B8FC /* Snowplow-iOS copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Snowplow-iOS copy2-Info.plist"; path = "/Users/mhadam/Snowplow/snowplow-objc-tracker/Snowplow-iOS copy2-Info.plist"; sourceTree = "<absolute>"; };
+		75F9C58021F8212700A5B8FC /* Snowplow-watchOS copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Snowplow-watchOS copy2-Info.plist"; path = "/Users/mhadam/Snowplow/snowplow-objc-tracker/Snowplow-watchOS copy2-Info.plist"; sourceTree = "<absolute>"; };
+		75F9C5A721F8212900A5B8FC /* Snowplow-macOS copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Snowplow-macOS copy2-Info.plist"; path = "/Users/mhadam/Snowplow/snowplow-objc-tracker/Snowplow-macOS copy2-Info.plist"; sourceTree = "<absolute>"; };
 		AB0C27C0191B408200018557 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB0C27C4191B408200018557 /* Snowplow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Snowplow-Prefix.pch"; sourceTree = "<group>"; };
 		AB0C27C5191B408200018557 /* Snowplow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Snowplow.h; sourceTree = "<group>"; };
@@ -363,6 +366,9 @@
 				AB0C27C2191B408200018557 /* Snowplow */,
 				AB0C27BF191B408200018557 /* Frameworks */,
 				AB0C27BE191B408200018557 /* Products */,
+				75F9C55721F8212500A5B8FC /* Snowplow-iOS copy2-Info.plist */,
+				75F9C58021F8212700A5B8FC /* Snowplow-watchOS copy2-Info.plist */,
+				75F9C5A721F8212900A5B8FC /* Snowplow-macOS copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
