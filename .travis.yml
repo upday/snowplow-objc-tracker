@@ -7,11 +7,8 @@ env:
 rvm:
     - 2.3.7
 before_install:
-    - gem install cocoapods -v '1.5.3'
     - gem install slather
     - gem install xcpretty -N --no-ri --no-rdoc
-    - brew update
-    - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
 install:
     - ./.travis/install.sh
 script: ./.travis/test.sh
