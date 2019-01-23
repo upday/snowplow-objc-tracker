@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "752DABCB21CC38550065F874"
                BuildableName = "SnowplowTracker.framework"
-               BlueprintName = "Snowplow iOS"
+               BlueprintName = "Snowplow-iOS"
                ReferencedContainer = "container:Snowplow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "752DABD321CC38560065F874"
-               BuildableName = "Snowplow iOSTests.xctest"
-               BlueprintName = "Snowplow iOSTests"
+               BuildableName = "Snowplow-iOSTests.xctest"
+               BlueprintName = "Snowplow-iOSTests"
                ReferencedContainer = "container:Snowplow.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "752DABCB21CC38550065F874"
             BuildableName = "SnowplowTracker.framework"
-            BlueprintName = "Snowplow iOS"
+            BlueprintName = "Snowplow-iOS"
             ReferencedContainer = "container:Snowplow.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,7 +66,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "752DABCB21CC38550065F874"
             BuildableName = "SnowplowTracker.framework"
-            BlueprintName = "Snowplow iOS"
+            BlueprintName = "Snowplow-iOS"
             ReferencedContainer = "container:Snowplow.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,7 +84,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "752DABCB21CC38550065F874"
             BuildableName = "SnowplowTracker.framework"
-            BlueprintName = "Snowplow iOS"
+            BlueprintName = "Snowplow-iOS"
             ReferencedContainer = "container:Snowplow.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

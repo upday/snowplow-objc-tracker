@@ -195,10 +195,10 @@
 		049B2BDA1B7A203200BD82FC /* SPRequestCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPRequestCallback.h; sourceTree = "<group>"; };
 		750E7F1121F2735C0050A993 /* Nocilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nocilla.framework; path = Carthage/Build/iOS/Nocilla.framework; sourceTree = "<group>"; };
 		752DABCC21CC38550065F874 /* SnowplowTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnowplowTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		752DABD421CC38560065F874 /* Snowplow iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snowplow iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		752DABD421CC38560065F874 /* Snowplow-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snowplow-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		752DABE821CC3A090065F874 /* Snowplow_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snowplow_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		752DABF521CC3B380065F874 /* Snowplow_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snowplow_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		752DABFD21CC3B380065F874 /* Snowplow macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snowplow macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		752DABFD21CC3B380065F874 /* Snowplow-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snowplow-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		752DAC0221CC3B380065F874 /* Snowplow_macOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Snowplow_macOSTests.m; sourceTree = "<group>"; };
 		752DAC0421CC3B380065F874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		752DAC0C21CC3EEA0065F874 /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FMDB.framework; path = Carthage/Build/iOS/FMDB.framework; sourceTree = "<group>"; };
@@ -367,10 +367,10 @@
 			isa = PBXGroup;
 			children = (
 				752DABCC21CC38550065F874 /* SnowplowTracker.framework */,
-				752DABD421CC38560065F874 /* Snowplow iOSTests.xctest */,
+				752DABD421CC38560065F874 /* Snowplow-iOSTests.xctest */,
 				752DABE821CC3A090065F874 /* Snowplow_watchOS.framework */,
 				752DABF521CC3B380065F874 /* Snowplow_macOS.framework */,
-				752DABFD21CC3B380065F874 /* Snowplow macOSTests.xctest */,
+				752DABFD21CC3B380065F874 /* Snowplow-macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -509,9 +509,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		752DABCB21CC38550065F874 /* Snowplow iOS */ = {
+		752DABCB21CC38550065F874 /* Snowplow-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 752DABDD21CC38560065F874 /* Build configuration list for PBXNativeTarget "Snowplow iOS" */;
+			buildConfigurationList = 752DABDD21CC38560065F874 /* Build configuration list for PBXNativeTarget "Snowplow-iOS" */;
 			buildPhases = (
 				752DABC721CC38550065F874 /* Headers */,
 				752DABC821CC38550065F874 /* Sources */,
@@ -522,14 +522,14 @@
 			);
 			dependencies = (
 			);
-			name = "Snowplow iOS";
+			name = "Snowplow-iOS";
 			productName = "Snowplow iOS";
 			productReference = 752DABCC21CC38550065F874 /* SnowplowTracker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		752DABD321CC38560065F874 /* Snowplow iOSTests */ = {
+		752DABD321CC38560065F874 /* Snowplow-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 752DABE021CC38560065F874 /* Build configuration list for PBXNativeTarget "Snowplow iOSTests" */;
+			buildConfigurationList = 752DABE021CC38560065F874 /* Build configuration list for PBXNativeTarget "Snowplow-iOSTests" */;
 			buildPhases = (
 				752DABD021CC38560065F874 /* Sources */,
 				752DABD121CC38560065F874 /* Frameworks */,
@@ -541,14 +541,14 @@
 			dependencies = (
 				752DABD721CC38560065F874 /* PBXTargetDependency */,
 			);
-			name = "Snowplow iOSTests";
+			name = "Snowplow-iOSTests";
 			productName = "Snowplow iOSTests";
-			productReference = 752DABD421CC38560065F874 /* Snowplow iOSTests.xctest */;
+			productReference = 752DABD421CC38560065F874 /* Snowplow-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		752DABE721CC3A090065F874 /* Snowplow watchOS */ = {
+		752DABE721CC3A090065F874 /* Snowplow-watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 752DABED21CC3A090065F874 /* Build configuration list for PBXNativeTarget "Snowplow watchOS" */;
+			buildConfigurationList = 752DABED21CC3A090065F874 /* Build configuration list for PBXNativeTarget "Snowplow-watchOS" */;
 			buildPhases = (
 				752DABE321CC3A090065F874 /* Headers */,
 				752DABE421CC3A090065F874 /* Sources */,
@@ -559,14 +559,14 @@
 			);
 			dependencies = (
 			);
-			name = "Snowplow watchOS";
+			name = "Snowplow-watchOS";
 			productName = "Snowplow watchOS";
 			productReference = 752DABE821CC3A090065F874 /* Snowplow_watchOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		752DABF421CC3B380065F874 /* Snowplow macOS */ = {
+		752DABF421CC3B380065F874 /* Snowplow-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 752DAC0621CC3B380065F874 /* Build configuration list for PBXNativeTarget "Snowplow macOS" */;
+			buildConfigurationList = 752DAC0621CC3B380065F874 /* Build configuration list for PBXNativeTarget "Snowplow-macOS" */;
 			buildPhases = (
 				752DABF021CC3B380065F874 /* Headers */,
 				752DABF121CC3B380065F874 /* Sources */,
@@ -577,14 +577,14 @@
 			);
 			dependencies = (
 			);
-			name = "Snowplow macOS";
+			name = "Snowplow-macOS";
 			productName = "Snowplow macOS";
 			productReference = 752DABF521CC3B380065F874 /* Snowplow_macOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		752DABFC21CC3B380065F874 /* Snowplow macOSTests */ = {
+		752DABFC21CC3B380065F874 /* Snowplow-macOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 752DAC0921CC3B380065F874 /* Build configuration list for PBXNativeTarget "Snowplow macOSTests" */;
+			buildConfigurationList = 752DAC0921CC3B380065F874 /* Build configuration list for PBXNativeTarget "Snowplow-macOSTests" */;
 			buildPhases = (
 				752DABF921CC3B380065F874 /* Sources */,
 				752DABFA21CC3B380065F874 /* Frameworks */,
@@ -595,9 +595,9 @@
 			dependencies = (
 				752DAC0021CC3B380065F874 /* PBXTargetDependency */,
 			);
-			name = "Snowplow macOSTests";
+			name = "Snowplow-macOSTests";
 			productName = "Snowplow macOSTests";
-			productReference = 752DABFD21CC3B380065F874 /* Snowplow macOSTests.xctest */;
+			productReference = 752DABFD21CC3B380065F874 /* Snowplow-macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -638,11 +638,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				752DABCB21CC38550065F874 /* Snowplow iOS */,
-				752DABD321CC38560065F874 /* Snowplow iOSTests */,
-				752DABE721CC3A090065F874 /* Snowplow watchOS */,
-				752DABF421CC3B380065F874 /* Snowplow macOS */,
-				752DABFC21CC3B380065F874 /* Snowplow macOSTests */,
+				752DABCB21CC38550065F874 /* Snowplow-iOS */,
+				752DABD321CC38560065F874 /* Snowplow-iOSTests */,
+				752DABE721CC3A090065F874 /* Snowplow-watchOS */,
+				752DABF421CC3B380065F874 /* Snowplow-macOS */,
+				752DABFC21CC3B380065F874 /* Snowplow-macOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -772,12 +772,12 @@
 /* Begin PBXTargetDependency section */
 		752DABD721CC38560065F874 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 752DABCB21CC38550065F874 /* Snowplow iOS */;
+			target = 752DABCB21CC38550065F874 /* Snowplow-iOS */;
 			targetProxy = 752DABD621CC38560065F874 /* PBXContainerItemProxy */;
 		};
 		752DAC0021CC3B380065F874 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 752DABF421CC3B380065F874 /* Snowplow macOS */;
+			target = 752DABF421CC3B380065F874 /* Snowplow-macOS */;
 			targetProxy = 752DABFF21CC3B380065F874 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -833,6 +833,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowplowanalytics.Snowplow-iOS";
 				PRODUCT_NAME = SnowplowTracker;
 				SKIP_INSTALL = YES;
@@ -879,6 +880,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowplowanalytics.Snowplow-iOS";
 				PRODUCT_NAME = SnowplowTracker;
 				SKIP_INSTALL = YES;
@@ -918,6 +920,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowplowanalytics.Snowplow-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -954,6 +957,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowplowanalytics.Snowplow-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1000,6 +1004,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowplowanalytics.Snowplow-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = watchos;
@@ -1048,6 +1053,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowplowanalytics.Snowplow-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = watchos;
@@ -1100,6 +1106,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowplowanalytics.Snowplow-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
@@ -1147,6 +1154,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowplowanalytics.Snowplow-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
@@ -1181,6 +1189,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowplowanalytics.Snowplow-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1213,6 +1222,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowplowanalytics.Snowplow-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1334,7 +1344,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		752DABDD21CC38560065F874 /* Build configuration list for PBXNativeTarget "Snowplow iOS" */ = {
+		752DABDD21CC38560065F874 /* Build configuration list for PBXNativeTarget "Snowplow-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				752DABDE21CC38560065F874 /* Debug */,
@@ -1343,7 +1353,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		752DABE021CC38560065F874 /* Build configuration list for PBXNativeTarget "Snowplow iOSTests" */ = {
+		752DABE021CC38560065F874 /* Build configuration list for PBXNativeTarget "Snowplow-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				752DABE121CC38560065F874 /* Debug */,
@@ -1352,7 +1362,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		752DABED21CC3A090065F874 /* Build configuration list for PBXNativeTarget "Snowplow watchOS" */ = {
+		752DABED21CC3A090065F874 /* Build configuration list for PBXNativeTarget "Snowplow-watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				752DABEE21CC3A090065F874 /* Debug */,
@@ -1361,7 +1371,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		752DAC0621CC3B380065F874 /* Build configuration list for PBXNativeTarget "Snowplow macOS" */ = {
+		752DAC0621CC3B380065F874 /* Build configuration list for PBXNativeTarget "Snowplow-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				752DAC0721CC3B380065F874 /* Debug */,
@@ -1370,7 +1380,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		752DAC0921CC3B380065F874 /* Build configuration list for PBXNativeTarget "Snowplow macOSTests" */ = {
+		752DAC0921CC3B380065F874 /* Build configuration list for PBXNativeTarget "Snowplow-macOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				752DAC0A21CC3B380065F874 /* Debug */,

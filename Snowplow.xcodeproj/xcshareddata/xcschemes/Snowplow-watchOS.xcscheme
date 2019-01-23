@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "752DABE721CC3A090065F874"
                BuildableName = "Snowplow_watchOS.framework"
-               BlueprintName = "Snowplow watchOS"
+               BlueprintName = "Snowplow-watchOS"
                ReferencedContainer = "container:Snowplow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "752DABE721CC3A090065F874"
             BuildableName = "Snowplow_watchOS.framework"
-            BlueprintName = "Snowplow watchOS"
+            BlueprintName = "Snowplow-watchOS"
             ReferencedContainer = "container:Snowplow.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "752DABE721CC3A090065F874"
             BuildableName = "Snowplow_watchOS.framework"
-            BlueprintName = "Snowplow watchOS"
+            BlueprintName = "Snowplow-watchOS"
             ReferencedContainer = "container:Snowplow.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
