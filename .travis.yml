@@ -1,8 +1,6 @@
 language: objective-c
 osx_image: xcode10.1
 env:
-    - TEST_PLATFORM="platform=iOS Simulator,OS=10.0,name=iPhone SE"
-    - TEST_PLATFORM="platform=iOS Simulator,OS=11.4,name=iPhone SE"
     - TEST_PLATFORM="platform=iOS Simulator,OS=12.1,name=iPhone XR"
 rvm:
     - 2.3.7
