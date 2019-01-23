@@ -7,35 +7,29 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-abstract_target 'Base' do
-
-  target 'Snowplow iOS' do
+target 'Snowplow iOS' do
     inherit! :search_paths
     platform :ios, '8.0'
     pod 'FMDB', '2.6.2'
     pod 'ReachabilitySwift'
-  end
-
-  target 'Snowplow macOS' do
-    pod 'FMDB', '2.6.2'
-    platform :osx, '10.9'
-  end
 end
 
-abstract_target 'BaseTests' do
+target 'Snowplow macOS' do
+    pod 'FMDB', '2.6.2'
+    platform :osx, '10.9'
+end
 
-  target 'Snowplow iOSTests' do
+target 'Snowplow iOSTests' do
     inherit! :search_paths
     platform :ios, '8.0'
     pod 'Nocilla'
     pod 'SnowplowIgluClient', :git => 'https://github.com/snowplow/iglu-objc-client.git', :branch => 'feature/carthage'
-  end
+end
 
-  target 'Snowplow macOSTests' do
+target 'Snowplow macOSTests' do
     platform :osx, '10.9'
     pod 'Nocilla'
     pod 'SnowplowIgluClient', :git => 'https://github.com/snowplow/iglu-objc-client.git', :branch => 'feature/carthage'
-  end
 end
 
 post_install do |installer|
