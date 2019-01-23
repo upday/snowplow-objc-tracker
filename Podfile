@@ -5,8 +5,6 @@
 # is part of the source tree.
 
 source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
-
 target 'Snowplow-iOS' do
     inherit! :search_paths
     platform :ios, '8.0'

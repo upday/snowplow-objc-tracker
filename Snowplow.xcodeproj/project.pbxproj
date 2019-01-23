@@ -45,6 +45,7 @@
 		752DAC4021CC4A830065F874 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB67D8C192D9552009A1ECE /* UIKit.framework */; };
 		752DAC4121CC4A8C0065F874 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0C27C0191B408200018557 /* Foundation.framework */; };
 		752DAC4221CC60F20065F874 /* Snowplow-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D6061E21C9CA8A00C7B016 /* Snowplow-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		753DDA6D21F803B10007C3AE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753DDA6C21F803B10007C3AE /* Cocoa.framework */; };
 		75CAC40521F2955100271FB3 /* TestSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CAC3F121F2955000271FB3 /* TestSession.m */; };
 		75CAC40621F2955100271FB3 /* TestEventStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CAC3F221F2955000271FB3 /* TestEventStore.m */; };
 		75CAC40721F2955100271FB3 /* TestPayload.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CAC3F321F2955000271FB3 /* TestPayload.m */; };
@@ -206,6 +207,7 @@
 		752DAC1021CC3F010065F874 /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FMDB.framework; path = Carthage/Build/watchOS/FMDB.framework; sourceTree = "<group>"; };
 		752DAC1221CC3F140065F874 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/Mac/Reachability.framework; sourceTree = "<group>"; };
 		752DAC1321CC3F140065F874 /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FMDB.framework; path = Carthage/Build/Mac/FMDB.framework; sourceTree = "<group>"; };
+		753DDA6C21F803B10007C3AE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		75CAC3B921F28BD600271FB3 /* SnowplowIgluClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnowplowIgluClient.framework; path = Carthage/Build/iOS/SnowplowIgluClient.framework; sourceTree = "<group>"; };
 		75CAC3C021F2930100271FB3 /* VVJSONSchemaValidation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VVJSONSchemaValidation.framework; path = Carthage/Build/iOS/VVJSONSchemaValidation.framework; sourceTree = "<group>"; };
 		75CAC3F121F2955000271FB3 /* TestSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSession.m; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753DDA6D21F803B10007C3AE /* Cocoa.framework in Frameworks */,
 				75CAC45721F2A1E400271FB3 /* FMDB.framework in Frameworks */,
 				75CAC45621F2A1CC00271FB3 /* Foundation.framework in Frameworks */,
 			);
@@ -378,6 +381,7 @@
 		AB0C27BF191B408200018557 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				753DDA6C21F803B10007C3AE /* Cocoa.framework */,
 				75CAC3C021F2930100271FB3 /* VVJSONSchemaValidation.framework */,
 				75CAC3B921F28BD600271FB3 /* SnowplowIgluClient.framework */,
 				750E7F1121F2735C0050A993 /* Nocilla.framework */,
