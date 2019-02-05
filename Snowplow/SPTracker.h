@@ -20,6 +20,12 @@
 //  License: Apache License Version 2.0
 //
 
+/*!
+ @file SPTracker.h
+
+ @brief Header file for SPTracker.
+ */
+
 #import <Foundation/Foundation.h>
 
 @class SPEmitter;
@@ -38,12 +44,6 @@
 @class SPPushNotification;
 @class SPForeground;
 @class SPBackground;
-
-/*!
- @file SPTracker.h
-
- @brief Header file for SPTracker.
- */
 
 /*!
  @brief The builder for SPTracker.
