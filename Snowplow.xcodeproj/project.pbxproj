@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751C98C22209C7A100387F9C /* SPBasicTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 751C98C12209C7A100387F9C /* SPBasicTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		751C98C32209C7A100387F9C /* SPBasicTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 751C98C12209C7A100387F9C /* SPBasicTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		751C98C52209C87B00387F9C /* SPBasicTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 751C98C42209C87B00387F9C /* SPBasicTracker.m */; };
+		751C98C62209C87B00387F9C /* SPBasicTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 751C98C42209C87B00387F9C /* SPBasicTracker.m */; };
 		752DABD521CC38560065F874 /* SnowplowTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DABCC21CC38550065F874 /* SnowplowTracker.framework */; };
 		752DABFE21CC3B380065F874 /* Snowplow_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752DABF521CC3B380065F874 /* Snowplow_macOS.framework */; };
 		752DAC0321CC3B380065F874 /* Snowplow_macOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 752DAC0221CC3B380065F874 /* Snowplow_macOSTests.m */; };
@@ -236,6 +240,8 @@
 		0485CA151BAC65A300214BC5 /* SPSelfDescribingJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSelfDescribingJson.m; sourceTree = "<group>"; };
 		049B2BDA1B7A203200BD82FC /* SPRequestCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPRequestCallback.h; sourceTree = "<group>"; };
 		750E7F1121F2735C0050A993 /* Nocilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nocilla.framework; path = Carthage/Build/iOS/Nocilla.framework; sourceTree = "<group>"; };
+		751C98C12209C7A100387F9C /* SPBasicTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBasicTracker.h; sourceTree = "<group>"; };
+		751C98C42209C87B00387F9C /* SPBasicTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBasicTracker.m; sourceTree = "<group>"; };
 		752DABCC21CC38550065F874 /* SnowplowTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnowplowTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		752DABD421CC38560065F874 /* Snowplow-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snowplow-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		752DABE821CC3A090065F874 /* Snowplow_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snowplow_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -456,6 +462,7 @@
 				AB0C27C3191B408200018557 /* Supporting Files */,
 				043EC5E61B8F224900294081 /* Snowplow.m */,
 				AB9E8211192DD336006744C9 /* SPTracker.m */,
+				AB9E8210192DD336006744C9 /* SPTracker.h */,
 				AB0C27EA191B43D600018557 /* SPEmitter.m */,
 				04062D751B8390870019B8D1 /* SPSubject.m */,
 				043EC5DF1B8F049200294081 /* SPSession.m */,
@@ -469,7 +476,8 @@
 				75D6061F21C9CA8B00C7B016 /* ReachabilityBridge.swift */,
 				75D6061E21C9CA8A00C7B016 /* Snowplow-Bridging-Header.h */,
 				AB0C27C5191B408200018557 /* Snowplow.h */,
-				AB9E8210192DD336006744C9 /* SPTracker.h */,
+				751C98C12209C7A100387F9C /* SPBasicTracker.h */,
+				751C98C42209C87B00387F9C /* SPBasicTracker.m */,
 				AB0C27E9191B43D600018557 /* SPEmitter.h */,
 				04062D741B8390710019B8D1 /* SPSubject.h */,
 				043EC5DD1B8F048500294081 /* SPSession.h */,
@@ -510,6 +518,7 @@
 				752DAC3A21CC43C70065F874 /* SPUtilities.h in Headers */,
 				752DAC3E21CC43C70065F874 /* SPRequestCallback.h in Headers */,
 				752DAC3D21CC43C70065F874 /* SPEvent.h in Headers */,
+				751C98C22209C7A100387F9C /* SPBasicTracker.h in Headers */,
 				752DAC3821CC43C70065F874 /* SPSelfDescribingJson.h in Headers */,
 				752DAC4221CC60F20065F874 /* Snowplow-Bridging-Header.h in Headers */,
 				752DAC3121CC43C60065F874 /* OpenIDFA.h in Headers */,
@@ -575,6 +584,7 @@
 				75F9C5EB21FA35BC00A5B8FC /* SPPayload.h in Headers */,
 				75F9C5EC21FA35BC00A5B8FC /* SPSelfDescribingJson.h in Headers */,
 				75F9C5EE21FA35BC00A5B8FC /* SPUtilities.h in Headers */,
+				751C98C32209C7A100387F9C /* SPBasicTracker.h in Headers */,
 				75F9C5F121FA35BC00A5B8FC /* SPEvent.h in Headers */,
 				75F9C5F221FA35BC00A5B8FC /* SPRequestCallback.h in Headers */,
 				75F9C5E421FA35BC00A5B8FC /* OpenIDFA.h in Headers */,
@@ -796,6 +806,7 @@
 				752DAC2721CC42BC0065F874 /* SPUtilities.m in Sources */,
 				752DAC2921CC42BC0065F874 /* SPRequestResponse.m in Sources */,
 				752DAC2B21CC42BC0065F874 /* SPWeakTimerTarget.m in Sources */,
+				751C98C52209C87B00387F9C /* SPBasicTracker.m in Sources */,
 				752DAC2D21CC42BC0065F874 /* SPEvent.m in Sources */,
 				752DAC2F21CC42BC0065F874 /* ReachabilityBridge.swift in Sources */,
 			);
@@ -884,6 +895,7 @@
 				75F9C5DE21FA357100A5B8FC /* SPUtilities.m in Sources */,
 				75F9C5DF21FA357100A5B8FC /* SPRequestResponse.m in Sources */,
 				75F9C5E021FA357100A5B8FC /* SPWeakTimerTarget.m in Sources */,
+				751C98C62209C87B00387F9C /* SPBasicTracker.m in Sources */,
 				75F9C5E121FA357100A5B8FC /* SPEvent.m in Sources */,
 				75F9C5E221FA357100A5B8FC /* ReachabilityBridge.swift in Sources */,
 			);
