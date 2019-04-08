@@ -10,7 +10,7 @@
         ], 
         "connection": {
           "http": {
-            "uri": "http://iglucentral.com"
+            "uri": "https://raw.githubusercontent.com/snowplow/iglu-central/tracker-dev"
           }
         }, 
         "priority": 0
