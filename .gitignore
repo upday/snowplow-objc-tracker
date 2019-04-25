@@ -39,3 +39,7 @@ Frameworks/
 
 # Documentation
 /docs/html/
+
+# Automated test build dir
+build/
+node_modules/
