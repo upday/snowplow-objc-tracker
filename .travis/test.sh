@@ -12,3 +12,5 @@ xcodebuild build -project ./SnowplowSwiftDemo/SnowplowSwiftDemo.xcodeproj \
 	CODE_SIGN_ENTITLEMENTS="" \
 	CODE_SIGNING_ALLOWED="NO" \
 	| xcpretty
+
+
