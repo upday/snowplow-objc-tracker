@@ -3,7 +3,7 @@ const request = require('request');
 
 // URL of the Snowplow Micro to be interacted with
 //export const COLLECTOR_ENDPOINT = '<%= subdomain %>' + '.ngrok.io';
-export const COLLECTOR_ENDPOINT = '192.168.0.1';
+export const COLLECTOR_ENDPOINT = '0.0.0.0:9090';
 
 // endpoints to interact with Snowplow Micro
 const MICRO_GOOD  = "/micro/good";
@@ -19,52 +19,52 @@ export const uris = {
 };
 
 export function resetMicro() {
-    request.get(COLLECTOR_ENDPOINT + MICRO_RESET);
+    request.get("http://" + COLLECTOR_ENDPOINT + MICRO_RESET);
 }
 
 // schema is a string for Iglu URI
 // contexts is an array of strings for Iglu URIs
 export function getValidEvents(schema, contexts, custom) {
     let options = {
-        json: {
-            schema: schema,
-            contexts: contexts
+        url: "http://" + COLLECTOR_ENDPOINT + MICRO_GOOD,
+        json: true,
+        body: {
+            'schema': schema,
+            'contexts': contexts,
         }
     };
     if (custom) {
         options = custom;
     }
     return new Promise((resolve, reject) => {
-        request.post(COLLECTOR_ENDPOINT + MICRO_GOOD, options, function (error, response, body) {
+        request.post(options, function (error, response, body) {
             if (error) reject(error);
             if (response.statusCode !== 200) {
                 reject('Invalid status code <' + response.statusCode + '>');
             }
-            const json = JSON.parse(body);
-            if (json.hasOwnProperty('count') && json.count === 0) {
+            if (body.hasOwnProperty('count') && body.count === 0) {
                 reject('No valid matching events');
             }
-            resolve(body['events']);
+            resolve(body);
         });
     });
 }
 
 export function getCount() {
     return new Promise((resolve, reject) => {
-        request.get(COLLECTOR_ENDPOINT + MICRO_ALL, function (error, response, body) {
+        request.get({url:"http://" + COLLECTOR_ENDPOINT + MICRO_ALL, json:true}, function (error, response, body) {
             if (error) reject(error);
             if (response.statusCode !== 200) {
                 reject('Invalid status code <' + response.statusCode + '>');
             }
-            const json = JSON.parse(body);
-            if (!json.hasOwnProperty('good')) {
+            if (!body.hasOwnProperty('good')) {
                 reject('Unexpected response from Micro: missing good count');
-            } else if (!json.hasOwnProperty('bad')) {
+            } else if (!body.hasOwnProperty('bad')) {
                 reject('Unexpected response from Micro: missing bad count');
-            } else if (!json.hasOwnProperty('total')) {
+            } else if (!body.hasOwnProperty('total')) {
                 reject('Unexpected response from Micro: missing total count');
             } else {
-                resolve(json);
+                resolve(body);
             }
         });
     });

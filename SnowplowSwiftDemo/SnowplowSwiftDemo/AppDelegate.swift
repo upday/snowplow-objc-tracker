@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             completionHandler()
         case UNNotificationDefaultActionIdentifier: // App was opened from notification
             NSLog("Remote notification opened app from background!")
-            if let rootViewController = window?.rootViewController as? PageViewController {
+            if (window?.rootViewController as? PageViewController) != nil {
 
                 NSLog("Notification action identifier: %@", actionIdentifier)
 
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 })
 
                 //print(String(data: try! JSONSerialization.data(withJSONObject: event!.getPayload().getAsDictionary(), options: .prettyPrinted), encoding: .utf8 )!)
-                rootViewController.tracker?.trackPushNotificationEvent(event)
+                Analytics.getTracker()?.trackPushNotificationEvent(event)
             }
             completionHandler()
         default:

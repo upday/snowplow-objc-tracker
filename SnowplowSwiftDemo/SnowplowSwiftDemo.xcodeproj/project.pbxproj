@@ -18,6 +18,7 @@
 		75699CC6200FB29C00FFC20D /* SnowplowSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75699CC5200FB29C00FFC20D /* SnowplowSwiftDemoUITests.swift */; };
 		75866F89222C9BB40039A3E1 /* MetricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75866F88222C9BB40039A3E1 /* MetricsViewController.swift */; };
 		75866F8B222DD0B30039A3E1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75866F8A222DD0B30039A3E1 /* PageViewController.swift */; };
+		759E7F1122BD667200A06596 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E7F1022BD667200A06596 /* Analytics.swift */; };
 		75ABB1A12260E5B000527764 /* AdditionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ABB1A02260E5B000527764 /* AdditionalViewController.swift */; };
 		75F9C61021FC14A600A5B8FC /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F9C5F621FC004100A5B8FC /* FMDB.framework */; };
 		75F9C61121FC14A600A5B8FC /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F9C5F521FC004100A5B8FC /* Reachability.framework */; };
@@ -59,6 +60,7 @@
 		75699CC7200FB29C00FFC20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75866F88222C9BB40039A3E1 /* MetricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewController.swift; sourceTree = "<group>"; };
 		75866F8A222DD0B30039A3E1 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		759E7F1022BD667200A06596 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		75ABB1A02260E5B000527764 /* AdditionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalViewController.swift; sourceTree = "<group>"; };
 		75F9C5F421FC004100A5B8FC /* SnowplowTracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnowplowTracker.framework; path = Carthage/Build/iOS/SnowplowTracker.framework; sourceTree = "<group>"; };
 		75F9C5F521FC004100A5B8FC /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				75866F8A222DD0B30039A3E1 /* PageViewController.swift */,
 				75ABB1A02260E5B000527764 /* AdditionalViewController.swift */,
 				751BBDAE2012727B001DC712 /* DemoUtils.swift */,
+				759E7F1022BD667200A06596 /* Analytics.swift */,
 				75699CA6200FB29C00FFC20D /* Main.storyboard */,
 				75699CAC200FB29C00FFC20D /* Assets.xcassets */,
 				75699CAE200FB29C00FFC20D /* LaunchScreen.storyboard */,
@@ -323,6 +326,7 @@
 				75699CAB200FB29C00FFC20D /* SnowplowSwiftDemo.xcdatamodeld in Sources */,
 				75ABB1A12260E5B000527764 /* AdditionalViewController.swift in Sources */,
 				75866F8B222DD0B30039A3E1 /* PageViewController.swift in Sources */,
+				759E7F1122BD667200A06596 /* Analytics.swift in Sources */,
 				75866F89222C9BB40039A3E1 /* MetricsViewController.swift in Sources */,
 				75699CA3200FB29C00FFC20D /* AppDelegate.swift in Sources */,
 			);
@@ -408,7 +412,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -465,7 +469,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -494,8 +498,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -528,9 +532,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

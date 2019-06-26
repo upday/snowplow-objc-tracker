@@ -24,7 +24,6 @@ class MetricsViewController: UIViewController, UITextFieldDelegate, PageObserver
     @IBOutlet weak var sentLabel: UILabel!
     @IBOutlet weak var tokenLabel: UILabel!
     var updateTimer : Timer?
-    weak var tracker : SPTracker?
 
     @objc dynamic var snowplowId: String! = "metrics view"
 
@@ -35,7 +34,6 @@ class MetricsViewController: UIViewController, UITextFieldDelegate, PageObserver
     var parentPageViewController: PageViewController!
     func getParentPageViewController(parentRef: PageViewController) {
         parentPageViewController = parentRef
-        tracker = parentRef.tracker
     }
 
     override func viewDidLoad() {
@@ -45,13 +43,15 @@ class MetricsViewController: UIViewController, UITextFieldDelegate, PageObserver
     }
     
     @objc func updateMetrics() {
-        madeLabel.text = String(format: "Made: %lld", parentPageViewController.madeCounter)
-        dbCountLabel.text = String(format: "DB Count: %lu", CUnsignedLong(self.tracker?.emitter.getDbCount() ?? 0))
-        sessionCountLabel.text = String(format: "Session Count: %lu", CUnsignedLong(self.tracker?.getSessionIndex() ?? 0))
-        isRunningLabel.text = String(format: "Running: %@", self.tracker?.emitter.getSendingStatus() ?? false ? "yes" : "no")
-        isBackgroundLabel.text = String(format: "Background: %@", self.tracker?.getInBackground() ?? false ? "yes" : "no")
+        let tracker = Analytics.getTracker()
+        let emitter = Analytics.getEmitter()
+        madeLabel.text = String(format: "Made: %lld", Analytics.failureCount + Analytics.successCount)
+        dbCountLabel.text = String(format: "DB Count: %lu", CUnsignedLong(emitter?.getDbCount() ?? 0))
+        sessionCountLabel.text = String(format: "Session Count: %lu", CUnsignedLong(tracker?.getSessionIndex() ?? 0))
+        isRunningLabel.text = String(format: "Running: %@", tracker?.emitter.getSendingStatus() ?? false ? "yes" : "no")
+        isBackgroundLabel.text = String(format: "Background: %@", tracker?.getInBackground() ?? false ? "yes" : "no")
         isOnlineLabel.text = String(format: "Online: %@", SPUtilities.isOnline() ? "yes" : "no")
-        sentLabel.text = String(format: "Sent: %lu", CUnsignedLong(parentPageViewController.sentCounter))
+        sentLabel.text = String(format: "Sent: %lu", CUnsignedLong(Analytics.successCount))
     }
 
     /*

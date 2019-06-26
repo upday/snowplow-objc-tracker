@@ -22,7 +22,7 @@ config.capabilities = [
         orientation: 'PORTRAIT',
         maxInstances: 1,
         // The path to the app
-        app: join(process.cwd(), './build/SnowplowSwiftDemo.app'),
+        app: join(process.cwd(), './SnowplowSwiftDemo/build/SnowplowSwiftDemo.app'),
         // Read the reset strategies very well, they differ per platform, see
         // http://appium.io/docs/en/writing-running-appium/other/reset-strategies/
         noReset: true,

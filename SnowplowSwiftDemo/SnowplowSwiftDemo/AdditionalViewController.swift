@@ -13,14 +13,12 @@ import SnowplowTracker
 class AdditionalViewController: UIViewController, UITextFieldDelegate, PageObserver {
     
     @IBOutlet weak var trackingSwitch: UISegmentedControl!
-    weak var tracker : SPTracker?
     
     @objc dynamic var snowplowId: String! = "additional view"
     
     var parentPageViewController: PageViewController!
     func getParentPageViewController(parentRef: PageViewController) {
         parentPageViewController = parentRef
-        tracker = parentRef.tracker
     }
     
     override func viewDidLoad() {

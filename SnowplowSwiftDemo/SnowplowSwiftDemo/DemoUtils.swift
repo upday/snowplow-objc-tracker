@@ -10,28 +10,28 @@ import Foundation
 import SnowplowTracker
 
 class DemoUtils {
-    static func trackAll(_ tracker: SPTracker) {
-        self.trackPageViewWithTracker(tracker)
-        //self.trackScreenViewWithTracker(tracker)
-        self.trackStructuredEventWithTracker(tracker)
-        self.trackUnstructuredEventWithTracker(tracker)
-        self.trackTimingWithCategoryWithTracker(tracker)
-        self.trackEcommerceTransactionWithTracker(tracker)
-        self.trackPushNotificationWithTracker(tracker)
+    static func trackAll() {
+        self.trackPageView()
+        //self.trackScreenView()
+        self.trackStructuredEvent()
+        self.trackUnstructuredEvent()
+        self.trackTimingWithCategory()
+        self.trackEcommerceTransaction()
+        self.trackPushNotification()
     }
     
-    static func trackStructuredEventWithTracker(_ tracker: SPTracker) {
-        let event = SPStructured.build({ (builder : SPStructuredBuilder?) -> Void in
-            builder!.setCategory("DemoCategory")
-            builder!.setAction("DemoAction")
-            builder!.setLabel("DemoLabel")
-            builder!.setProperty("DemoProperty")
-            builder!.setValue(5)
-        })
-        tracker.trackStructuredEvent(event)
+    static func trackPageView() {
+        let tracker = Analytics.getTracker()
+        let event = SPPageView.build { (builder: SPPageViewBuilder?) -> Void in
+            builder!.setPageTitle("pageTitle")
+            builder!.setPageUrl("pageUrl")
+            builder!.setReferrer("demoReferrer")
+        }
+        tracker?.trackPageViewEvent(event)
     }
     
-    static func trackUnstructuredEventWithTracker(_ tracker: SPTracker) {
+    static func trackStructuredEvent() {
+        let tracker = Analytics.getTracker()
         var event = SPStructured.build({ (builder : SPStructuredBuilder?) -> Void in
             builder!.setCategory("DemoCategory")
             builder!.setAction("DemoAction")
@@ -39,7 +39,7 @@ class DemoUtils {
             builder!.setProperty("DemoProperty")
             builder!.setValue(5)
         })
-        tracker.trackStructuredEvent(event)
+        tracker?.trackStructuredEvent(event)
         
         event = SPStructured.build({ (builder : SPStructuredBuilder?) -> Void in
             builder!.setCategory("DemoCategory")
@@ -49,7 +49,7 @@ class DemoUtils {
             builder!.setValue(5)
             builder!.setTimestamp(1243567890)
         })
-        tracker.trackStructuredEvent(event)
+        tracker?.trackStructuredEvent(event)
         
         event = SPStructured.build({ (builder : SPStructuredBuilder?) -> Void in
             builder!.setCategory("DemoCategory")
@@ -59,7 +59,7 @@ class DemoUtils {
             builder!.setValue(5)
             builder!.setContexts(self.getCustomContext())
         })
-        tracker.trackStructuredEvent(event)
+        tracker?.trackStructuredEvent(event)
         
         event = SPStructured.build({ (builder : SPStructuredBuilder?) -> Void in
             builder!.setCategory("DemoCategory")
@@ -69,39 +69,41 @@ class DemoUtils {
             builder!.setValue(5)
             builder!.setTimestamp(1243567890)
         })
-        tracker.trackStructuredEvent(event)
+        tracker?.trackStructuredEvent(event)
     }
     
-    static func trackPageViewWithTracker(_ tracker: SPTracker) {
+    // these will be BAD events since schema doesn't exist
+    static func trackUnstructuredEvent() {
+        let tracker = Analytics.getTracker()
         let data: NSDictionary = [ "level": 23, "score": 56473]
         let sdj = SPSelfDescribingJson(schema: "iglu:com.acme_company/demo_ios_event/jsonschema/1-0-0", andData: data);
         var event = SPUnstructured.build({ (builder : SPUnstructuredBuilder?) -> Void in
             builder!.setEventData(sdj!)
         })
-        tracker.trackUnstructuredEvent(event)
+        tracker?.trackUnstructuredEvent(event)
         
         event = SPUnstructured.build({ (builder : SPUnstructuredBuilder?) -> Void in
             builder!.setEventData(sdj!)
             builder!.setContexts(self.getCustomContext())
         })
-        tracker.trackUnstructuredEvent(event)
-
+        tracker?.trackUnstructuredEvent(event)
+        
         event = SPUnstructured.build({ (builder : SPUnstructuredBuilder?) -> Void in
             builder!.setEventData(sdj)
             builder!.setTimestamp(1243567890)
             builder!.setContexts(self.getCustomContext())
         })
-        tracker.trackUnstructuredEvent(event)
+        tracker?.trackUnstructuredEvent(event)
         
         event = SPUnstructured.build({ (builder : SPUnstructuredBuilder?) -> Void in
             builder!.setEventData(sdj)
             builder!.setTimestamp(1243567890)
         })
         
-        tracker.trackUnstructuredEvent(event)
+        tracker?.trackUnstructuredEvent(event)
     }
     
-    /**static func trackScreenViewWithTracker(_ tracker: SPTracker) {
+    /*static func trackScreenView(_ tracker: SPTracker) {
         var event = SPScreenView.build({ (builder : SPScreenViewBuilder?) -> Void in
             builder!.setName("DemoScreenName")
             builder!.setId("DemoScreenId")
@@ -132,14 +134,15 @@ class DemoUtils {
         tracker.trackScreenViewEvent(event)
     }*/
     
-    static func trackTimingWithCategoryWithTracker(_ tracker: SPTracker) {
+    static func trackTimingWithCategory() {
+        let tracker = Analytics.getTracker()
         var event = SPTiming.build({ (builder : SPTimingBuilder?) -> Void in
             builder!.setCategory("DemoTimingCategory")
             builder!.setVariable("DemoTimingVariable")
             builder!.setTiming(5)
             builder!.setLabel("DemoTimingLabel")
         })
-        tracker.trackTimingEvent(event)
+        tracker?.trackTimingEvent(event)
         
         event = SPTiming.build({ (builder : SPTimingBuilder?) -> Void in
             builder!.setCategory("DemoTimingCategory")
@@ -148,7 +151,7 @@ class DemoUtils {
             builder!.setLabel("DemoTimingLabel")
             builder!.setTimestamp(1243567890)
         })
-        tracker.trackTimingEvent(event)
+        tracker?.trackTimingEvent(event)
         
         event = SPTiming.build({ (builder : SPTimingBuilder?) -> Void in
             builder!.setCategory("DemoTimingCategory")
@@ -157,7 +160,7 @@ class DemoUtils {
             builder!.setLabel("DemoTimingLabel")
             builder!.setContexts(self.getCustomContext())
         })
-        tracker.trackTimingEvent(event)
+        tracker?.trackTimingEvent(event)
         
         event = SPTiming.build({ (builder : SPTimingBuilder?) -> Void in
             builder!.setCategory("DemoTimingCategory")
@@ -167,11 +170,12 @@ class DemoUtils {
             builder!.setTimestamp(1243567890)
             builder!.setContexts(self.getCustomContext())
         })
-        print(String(data: try! JSONSerialization.data(withJSONObject: event!.getPayload().getAsDictionary(), options: .prettyPrinted), encoding: .utf8 )!)
-        tracker.trackTimingEvent(event)
+        
+        tracker?.trackTimingEvent(event)
     }
     
-    static func trackEcommerceTransactionWithTracker(_ tracker: SPTracker) {
+    static func trackEcommerceTransaction() {
+        let tracker = Analytics.getTracker()
         let transactionID = "6a8078be"
         let itemArray : [Any] = [ SPEcommerceItem.build({ (builder : SPEcommTransactionItemBuilder?) -> Void in
             builder!.setItemId(transactionID)
@@ -195,7 +199,7 @@ class DemoUtils {
             builder!.setCurrency("USD")
             builder!.setItems(itemArray)
         })
-        tracker.trackEcommerceEvent(event)
+        tracker?.trackEcommerceEvent(event)
         
         event = SPEcommerce.build({ (builder : SPEcommTransactionBuilder?) -> Void in
             builder!.setOrderId(transactionID)
@@ -210,7 +214,7 @@ class DemoUtils {
             builder!.setItems(itemArray)
             builder!.setTimestamp(1243567890)
         })
-        tracker.trackEcommerceEvent(event)
+        tracker?.trackEcommerceEvent(event)
         
         event = SPEcommerce.build({ (builder : SPEcommTransactionBuilder?) -> Void in
             builder!.setOrderId(transactionID)
@@ -225,7 +229,7 @@ class DemoUtils {
             builder!.setItems(itemArray)
             builder!.setContexts(self.getCustomContext())
         })
-        tracker.trackEcommerceEvent(event)
+        tracker?.trackEcommerceEvent(event)
         
         event = SPEcommerce.build({ (builder : SPEcommTransactionBuilder?) -> Void in
             builder!.setOrderId(transactionID)
@@ -242,10 +246,11 @@ class DemoUtils {
             builder!.setTimestamp(1243567890)
         })
 
-        tracker.trackEcommerceEvent(event)
+        tracker?.trackEcommerceEvent(event)
     }
 
-    static func trackPushNotificationWithTracker(_ tracker: SPTracker) {
+    static func trackPushNotification() {
+        let tracker = Analytics.getTracker()
         let attachments = [["identifier": "testidentifier",
                             "url": "testurl",
                             "type": "testtype"]]
@@ -273,9 +278,10 @@ class DemoUtils {
             builder!.setNotification(content)
         })
 
-        tracker.trackPushNotificationEvent(event)
+        tracker?.trackPushNotificationEvent(event)
     }
 
+    // this context schema doesn't exist, therefore makes any event BAD
     static func getCustomContext() -> NSMutableArray {
         let data : NSDictionary = [ "snowplow": "demo-tracker" ]
         let context = SPSelfDescribingJson(schema: "iglu:com.acme_company/demo_ios_event/jsonschema/1-0-0", andData: data)
