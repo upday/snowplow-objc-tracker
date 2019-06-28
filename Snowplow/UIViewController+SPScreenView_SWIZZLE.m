@@ -48,7 +48,7 @@
 
 - (void) SP_viewDidAppear:(BOOL)animated {
     [self SP_viewDidAppear:animated];
-
+    NSLog(@"SWIZZLED!!!!!");
     // Construct userInfo
     NSMutableDictionary * userInfo = [[NSMutableDictionary alloc] init];
     userInfo[@"viewControllerClassName"] = NSStringFromClass([self class]);
