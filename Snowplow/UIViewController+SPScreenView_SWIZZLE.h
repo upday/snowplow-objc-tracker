@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *) _SP_getViewControllerName;
 - (BOOL) _SP_validateString:(NSString *)string;
 - (NSString *) _SP_getSnowplowId;
++ (void) SP_swizzleViewDidAppear;
 
 @end
 

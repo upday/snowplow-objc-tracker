@@ -15,7 +15,7 @@
 
 @implementation UIViewController (SPScreenView_SWIZZLE)
 
-+ (void) load {
++ (void) SP_swizzleViewDidAppear {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //* Then swizzle */

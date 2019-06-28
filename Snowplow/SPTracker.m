@@ -32,6 +32,7 @@
 #import "SPScreenState.h"
 #import "SPInstallTracker.h"
 #import "SNOWGlobalContexts.h"
+#import "UIViewController+SPScreenView_SWIZZLE.h"
 
 /** A class extension that makes the screen view states mutable internally. */
 @interface SPTracker ()
@@ -256,6 +257,10 @@ void uncaughtExceptionHandler(NSException *exception) {
 }
 
 - (void) setAutotrackScreenViews:(BOOL)autotrackScreenViews {
+    if (autotrackScreenViews) {
+        // FIXME: This does not switch off
+        [UIViewController SP_swizzleViewDidAppear];
+    }
     _autotrackScreenViews = autotrackScreenViews;
 }
 
