@@ -32,13 +32,6 @@ end
 
 post_install do |installer|
   handle_sqlite3 installer
-  installer.pods_project.targets.each do |target|
-    if ['ReachabilitySwift'].include? target.name
-      target.build_configurations.each do |config|
-        config.build_settings['SWIFT_VERSION'] = '4.2'
-      end
-    end
-  end
 end
 
 def handle_sqlite3 installer
